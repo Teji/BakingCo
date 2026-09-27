@@ -1,0 +1,141 @@
+[
+  {
+    "id": "3fff9d4b-dab0-4030-a788-5201938516fb",
+    "name": "Barbie",
+    "slug": "cake-1790426232192",
+    "description": "100% Eggless & Customisable in any flavour\n\u2728 Name & age can be customised\n\u2728 Same day / Next day delivery available",
+    "category": "Birthday",
+    "price": 140.0,
+    "original_price": 140.0,
+    "image_url": "https://ezqrlkeqpjhwuiydmrgs.supabase.co/storage/v1/object/public/cake-images/cake-1790426232192/1790427543613-27257278-93b4-4198-86f4-75223ef6284c.png",
+    "featured": true,
+    "available": true,
+    "offer_text": "40",
+    "flavors": [
+      "Confirm with baker"
+    ],
+    "sizes": [
+      "1 kg"
+    ],
+    "created_at": "2026-09-26T12:42:10.49994+00:00",
+    "updated_at": "2026-09-26T14:06:05.268661+00:00",
+    "active": true,
+    "sample": false,
+    "gallery": [],
+    "egg_options": [
+      "Confirm with baker"
+    ],
+    "ingredients": "100% Eggless & Customisable in any flavour\n\u2728 Name & age can be customised\n\u2728 Same day / Next day delivery available",
+    "allergens": "Please discuss allergies before ordering.",
+    "offer_ends": "2026-09-27",
+    "variants": [
+      {
+        "id": "one-kg",
+        "label": "1 kg",
+        "price": 140,
+        "serves": "56",
+        "offerPrice": 84
+      }
+    ],
+    "sort_order": 0,
+    "min_notice_days": 0
+  },
+  {
+    "id": "9dce0879-6b8f-4510-9cc8-7a6b74f36028",
+    "name": "Gold",
+    "slug": "cake-1790440073216",
+    "description": "Honoured to create this 2-tier Golden Jubilee Anniversary Cake for Iqbal & Arvinder\u2019s 50th Anniversary.\n\nIvory & Gold theme with handcrafted roses, gold drip, and vintage frame detailing - because 50 years deserves nothing but luxury.",
+    "category": "Anniversary",
+    "price": 500.0,
+    "original_price": null,
+    "image_url": "https://ezqrlkeqpjhwuiydmrgs.supabase.co/storage/v1/object/public/cake-images/cake-1790440073216/1790440244847-2e7ee9f1-2434-4d42-936c-efdf4e80cdb4.png",
+    "featured": false,
+    "available": true,
+    "offer_text": "",
+    "flavors": [
+      "Confirm with baker"
+    ],
+    "sizes": [
+      "1 kg"
+    ],
+    "created_at": "2026-09-26T16:31:14.4251+00:00",
+    "updated_at": "2026-09-26T16:31:14.4251+00:00",
+    "active": true,
+    "sample": false,
+    "gallery": [],
+    "egg_options": [
+      "Confirm with baker"
+    ],
+    "ingredients": "",
+    "allergens": "Please discuss allergies before ordering.",
+    "offer_ends": null,
+    "variants": [
+      {
+        "id": "one-kg",
+        "label": "1 kg",
+        "price": 500,
+        "serves": "2",
+        "offerPrice": null
+      }
+    ],
+    "sort_order": 0,
+    "min_notice_days": 0
+  },
+  {
+    "id": "0f52eea2-02bf-46c4-b701-d9113eb1ec20",
+    "name": "women",
+    "slug": "cake-1790440362024",
+    "description": "For the woman who deserves the world \u2014 we gave her flowers and cake \ud83c\udf39\ud83c\udf82\n\nThis top-forward birthday cake for wife with red mirror glaze, fresh roses & edible pearls was made to make her day unforgettable.\n\nBecause \u201cHappy Birthday Wifey\u201d should look this luxurious.Describe your cake.",
+    "category": "Wife",
+    "price": 0.0,
+    "original_price": null,
+    "image_url": "https://ezqrlkeqpjhwuiydmrgs.supabase.co/storage/v1/object/public/cake-images/cake-1790440362024/1790440486888-02a693fa-7c9c-4910-8e4e-f980eedf5166.png",
+    "featured": false,
+    "available": true,
+    "offer_text": "",
+    "flavors": [
+      "Confirm with baker"
+    ],
+    "sizes": [
+      "1 kg",
+      "1.5 kg",
+      ".5 kg"
+    ],
+    "created_at": "2026-09-26T16:33:03.94545+00:00",
+    "updated_at": "2026-09-26T16:35:18.99914+00:00",
+    "active": true,
+    "sample": false,
+    "gallery": [],
+    "egg_options": [
+      "Confirm with baker"
+    ],
+    "ingredients": "",
+    "allergens": "Please discuss allergies before ordering.",
+    "offer_ends": null,
+    "variants": [
+      {
+        "id": "one-kg",
+        "label": "1 kg",
+        "price": null,
+        "serves": "",
+        "offerPrice": null
+      },
+      {
+        "id": "size-1790440500271",
+        "label": "1.5 kg",
+        "price": null,
+        "serves": "",
+        "offerPrice": null
+      },
+      {
+        "id": "size-1790440503361",
+        "label": ".5 kg",
+        "price": null,
+        "serves": "",
+        "offerPrice": null
+      }
+    ],
+    "sort_order": 0,
+    "min_notice_days": 0
+  }
+]

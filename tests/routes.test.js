@@ -1,0 +1,13 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import request from 'supertest';
+import {JSDOM} from 'jsdom';
+process.env.DEMO_MODE='true';
+const {default:app}=await import('../server.js');
+for(const path of ['/','/cakes','/cakes?category=Birthday','/cakes?offers=1','/cakes?budget=1000','/cakes/cake-1790426232192','/cart','/custom','/corporate','/contact','/about','/faq','/policies/delivery','/policies/refund','/policies/privacy','/policies/terms','/admin','/admin/settings','/admin/orders'])test(`Renders ${path}`,async()=>{const r=await request(app).get(path);assert.equal(r.status,200,r.text);assert.match(r.text,/<title>/);const doc=new JSDOM(r.text).window.document;assert.ok(doc.querySelector('h1'));const ids=[...doc.querySelectorAll('[id]')].map(x=>x.id);assert.equal(new Set(ids).size,ids.length,'No duplicate element IDs')});
+test('Unknown page and product return 404',async()=>{for(const path of ['/cakes/not-real','/unknown'])assert.equal((await request(app).get(path)).status,404)});
+test('Static assets and font are present',async()=>{for(const p of ['/css/store.css','/js/store.js','/js/admin-bundle.js','/assets/images/hero-sample.png','/assets/images/baking-co-1.png','/assets/fonts/outfit.woff2'])assert.equal((await request(app).get(p)).status,200,p)});
+test('Homepage has reference shopping sections and actual Baking Co products',async()=>{const r=await request(app).get('/');for(const phrase of ['Barbie','Gold','women','Sweet indulgence','Cakes in vogue','What’s your type?','Sweet finds','_baking_co'])assert.ok(r.text.includes(phrase),phrase)});
+test('Demo checkout fails closed; public has no order-read endpoint',async()=>{assert.equal((await request(app).post('/api/orders').send({})).status,503);assert.equal((await request(app).get('/api/orders')).status,404)});
+test('Headers deny embedding and active third-party scripts',async()=>{const r=await request(app).get('/');assert.equal(r.headers['x-frame-options'],'SAMEORIGIN');assert.match(r.headers['content-security-policy'],/script-src 'self'/)});
+test('Filter and quote text render correctly',async()=>{const r=await request(app).get('/cakes?category=Birthday');const d=new JSDOM(r.text).window.document;assert.equal(d.querySelectorAll('.cake-card').length,1);assert.match(d.querySelector('.cake-card h3').textContent,/Barbie/);const q=await request(app).get('/cakes/cake-1790440362024');assert.match(q.text,/Quote on request/)});
